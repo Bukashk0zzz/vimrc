@@ -1,2 +1,2 @@
 # Install my vim profile
-curl https://github.com/priomsrb/vimswitch/raw/master/release/vimswitch > $vimswitch && python vimswitch bukashk0zzz/vimrc
+`wget https://github.com/priomsrb/vimswitch/raw/master/release/vimswitch && chmod +x vimswitch && ./vimswitch bukashk0zzz/vimrc && rm vimswitch`
