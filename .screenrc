@@ -1,0 +1,60 @@
+# skip the startup message
+startup_message off
+
+# go to home dir
+chdir
+
+
+setenv LC_CTYPE en_US.UTF-8
+defutf8 on
+hardcopy_append on
+crlf off
+multiuser off
+#deflogin on
+bufferfile $HOME/.screen_buffer
+pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."  # Emulate a logout msg
+msgwait 2         # 1 second messages
+#silencewait 5
+sorendition =s Gk                                                                                                                                                                                                                                                                                                             
+
+vbell off
+vbell_msg " *beep* "
+#activity "%c activity -> %n%f %t"
+#bell "%c bell -> %n%f %t^G"
+
+nethack on     # print wackier status messages
+nonblock on    # If a window goes unresponsive, don't block the whole session waiting for it.
+defnonblock 5  # flaky/slow ssh lines
+altscreen on   # restore window contents after using (e.g.) vi
+defmonitor on  # turn monitoring on
+shell -$SHELL  # use the default shell
+defbce on      # erase background with current bg color
+defflow off    # disable Ctrl-S/Ctrl-Q "flow control"
+#logfile ~/screen_%y-%m-%d_%0c
+
+
+# terminfo and termcap for nice 256 color terminal
+termcapinfo xterm*|rxvt-* 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+termcapinfo xterm*|rxvt-* 'hs:ts=\E]0;:fs=\007:ds=\E]0;\007'
+termcapinfo xterm*|rxvt-* ti@:te=\E[3J
+termcapinfo xterm*|rxvt-* hs@:cs=\E[%i%d;%dr:im=\E[4h:ei=\E[4l
+termcapinfo xterm*|rxvt-* hs@:cs=\E[%i%p1%d;%p2%dr:im=\E[4h:ei=\E[4l
+attrcolor b ".I"        # allow bold colors - necessary for some reason
+term 'xterm-256color'   # 256 terminal for xterm
+#term screen-256color   #By default, screen uses an 8-color terminal emulator. Use the following line to enable more colors, more-capable terminal emulator:
+
+
+# Automatically detach on hangup. 
+autodetach on
+
+# Change default scrollback value for new windows
+defscrollback 10000
+
+# look and feel
+hardstatus off
+hardstatus alwayslastline '%{gk}[ %{G}%H %{g}][%= %{wk}%?%-Lw%?%{=b kR}(%{W}%n*%f %t%?(%u)%?%{=b kR})%{= kw}%?%+Lw%?%?%= %{g}][%{Y}%l%{g}]%{=b C}[ %d.%m.%y %c ]%{W} [%1`]'
+activity "%c activity -> %n%f %t"
+
+# F1 and F2 to move one screen forward or backward
+bindkey -k k1 prev
+bindkey -k k2 next
