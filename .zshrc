@@ -7,6 +7,6 @@ DEFAULT_USER="ubuntu"
 
 COMPLETION_WAITING_DOTS="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(git npm node screen)
+plugins=(git command-not-found npm node screen Composer bower symfony2)
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 source $ZSH/oh-my-zsh.sh
