@@ -6,6 +6,7 @@ curl https://codeload.github.com/Bukashk0zzz/vimrc/zip/master > vim.zip
 unzip vim.zip
 cp -r vimrc-master/.vim* .
 rm vim.zip
+rm -rf vimrc-master
 
 curl https://raw.githubusercontent.com/Bukashk0zzz/vimrc/master/.zshrc > .zshrc
 
