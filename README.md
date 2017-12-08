@@ -10,7 +10,7 @@ rm -rf vimrc-master
 
 curl https://raw.githubusercontent.com/Bukashk0zzz/vimrc/master/.zshrc > .zshrc
 
-curl https://raw.githubusercontent.com/Bukashk0zzz/vimrc/master/.screenrc > .screenrc
+curl https://raw.githubusercontent.com/Bukashk0zzz/vimrc/master/.tmux.conf > .tmux.conf
 
 curl https://raw.githubusercontent.com/Bukashk0zzz/vimrc/master/.gitconfig > .gitconfig
 ```
