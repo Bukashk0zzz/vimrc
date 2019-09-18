@@ -2,7 +2,7 @@ export ZSH=$HOME/.oh-my-zsh
 export LC_ALL=en_US.UTF-8  
 export LANG=en_US.UTF-8
 
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 DEFAULT_USER="ubuntu"
 
 COMPLETION_WAITING_DOTS="true"
