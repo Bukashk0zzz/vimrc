@@ -8,9 +8,9 @@ cp -r vimrc-master/.vim* .
 rm vim.zip
 rm -rf vimrc-master
 
-curl https://raw.githubusercontent.com/Bukashk0zzz/vimrc/master/.zshrc > .zshrc
+curl https://raw.githubusercontent.com/Bukashk0zzz/vimrc/master/.zshrc > ~/.zshrc
 
-curl https://raw.githubusercontent.com/Bukashk0zzz/vimrc/master/.tmux.conf > .tmux.conf
+curl https://raw.githubusercontent.com/Bukashk0zzz/vimrc/master/.tmux.conf > ~/.tmux.conf
 
-curl https://raw.githubusercontent.com/Bukashk0zzz/vimrc/master/.gitconfig > .gitconfig
+curl https://raw.githubusercontent.com/Bukashk0zzz/vimrc/master/.gitconfig > ~/.gitconfig
 ```
